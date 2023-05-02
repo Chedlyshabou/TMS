@@ -1,0 +1,75 @@
+
+.keyword {
+    -fx-fill: #CC7832 !important;
+    -fx-font-weight: bold;
+}
+.semicolon {
+    -fx-fill: #A9B7C6 !important;
+    -fx-font-weight: bold;
+}
+.paren {
+    -fx-fill: #A9B7C6 !important;
+    -fx-font-weight: bold;
+}
+.bracket {
+    -fx-fill: #A9B7C6 !important;
+    -fx-font-weight: bold;
+}
+.brace {
+    -fx-fill: #A9B7C6 !important;
+    -fx-font-weight: bold;
+}
+.string {
+    -fx-fill: #6A8759 !important;
+    -fx-font-weight: bold;
+}
+
+.comment {
+    -fx-fill: #888888 !important;
+}
+
+.hex {
+    -fx-fill: #5a8191 !important;
+    -fx-font-weight: bold;
+}
+.number{
+    -fx-fill: #5a8191 !important;
+}
+.mention {
+    -fx-fill: #c3a856 !important;
+    -fx-font-weight: bold;
+}
+.selection {
+    -fx-fill: #214283 !important;
+}
+#codeArea .paragraph-text .text {
+    -fx-fill: #000000;
+}
+#codeArea1 .text {
+    -fx-fill: #000000;
+}
+.tab-header-area .tab-header-background {
+    -fx-background-color: white;
+}
+.tab {
+    -fx-pref-width: 110;
+    -fx-background-insets: 0 1 0 1, 0, 0;
+}
+.tab:selected {
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0 ;
+    -fx-background-color: white;
+    -fx-focus-color: ghostwhite;
+}
+.tab:hover {
+    -fx-background-color: rgba(55,53,47,0.08);
+}
+.tab .tab-label{
+    -fx-text-fill: rgba(55,53,47,0.65);
+    -fx-font-family: "Roboto Light";
+    -fx-alignment: CENTER;
+    -fx-font-size: 14px;
+}
+.tab:selected .tab-label{
+    -fx-text-fill: #000000;
+}

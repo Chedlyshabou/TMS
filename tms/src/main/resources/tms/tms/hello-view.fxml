@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tms.tms.MainController">
+  <columnConstraints>
+    <ColumnConstraints />
+    <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints />
+    <RowConstraints />
+    <RowConstraints />
+      <RowConstraints />
+  </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="841.0" prefWidth="1087.0" style="-fx-background-color: white;">
+         <children>
+            <Pane fx:id="ForgottenPasswordPane" prefHeight="801.0" prefWidth="1001.0" visible="false">
+               <children>
+                  <ImageView id="LogoTMS" fitHeight="150.0" fitWidth="200.0" layoutX="208.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/tms-logo-png-transparent.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="forgottenEmailErrorLabel" layoutX="380.0" layoutY="428.0" style="-fx-text-fill: red;" />
+                  <Label layoutX="399.0" layoutY="493.0" text="You can also" textFill="#b6b6b4">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="forgottenLogin" layoutX="475.0" layoutY="490.0" onAction="#toLogin" text="continue with email!" textFill="#b6b6b4" underline="true">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <Label layoutX="440.0" layoutY="762.0" text="© 2023 TMS Corp, Inc." textFill="#b6b6b4" />
+                  <Label layoutX="150.0" layoutY="706.0" text="By clicking &quot;Continue with email&quot; above, you acknowledge that you have read, understood and agreed to TMS' " textFill="#b6b6b4" />
+                  <Hyperlink id="TermsConditions" layoutX="732.0" layoutY="703.0" text="Terms &amp; Conditions." textFill="#b6b6b4" underline="true" />
+                  <TextArea fx:id="forgottenEmailField" layoutX="370.0" layoutY="399.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="260.0" promptText="Enter your email address" style="-fx-control-inner-background: #f7f7f5;" wrapText="true">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </TextArea>
+                  <JFXButton fx:id="forgottenButton" cancelButton="true" defaultButton="true" layoutX="370.0" layoutY="445.0" onAction="#sendPassword" prefHeight="29.0" prefWidth="260.0" ripplerFill="#f81d00" style="-fx-background-color: #fcf5f2; -fx-border-radius: 5px; -fx-border-style: solid; -fx-border-color: #f3ceca;" text="Send password to email" textAlignment="CENTER" textFill="#db6f6b">
+                     <font>
+                        <Font name="Corbel Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label id="LogInText" layoutX="370.0" layoutY="320.0" text="Send your forgotten password to your email.">
+                     <font>
+                        <Font name="Inter" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="WelcomeText" layoutX="370.0" layoutY="280.0" text="Welcome to TMS" textAlignment="CENTER">
+                     <font>
+                        <Font name="Constantia Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="RegisterPane" prefHeight="801.0" prefWidth="1001.0" visible="false">
+               <children>
+                  <Label fx:id="registerPasswordErrorLabel" layoutX="380.0" layoutY="459.0" prefWidth="651.0" style="-fx-text-fill: red;" wrapText="true" />
+                  <ImageView id="LogoTMS" fitHeight="150.0" fitWidth="200.0" layoutX="208.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/tms-logo-png-transparent.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="registerEmailErrorLabel" layoutX="380.0" layoutY="413.0" style="-fx-text-fill: red;" />
+                  <Label layoutX="381.0" layoutY="541.0" text="Do you have an account?" textFill="#b6b6b4">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="LoginNow" layoutX="535.0" layoutY="537.0" onAction="#toLogin" text="Login now!" textFill="#b6b6b4" underline="true">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <PasswordField fx:id="registerPasswordText" layoutX="370.0" layoutY="430.0" prefHeight="25.0" prefWidth="260.0" promptText="Enter your password" style="-fx-control-inner-background: #f7f7f5;">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <Label layoutX="440.0" layoutY="762.0" text="© 2023 TMS Corp, Inc." textFill="#b6b6b4" />
+                  <Label layoutX="150.0" layoutY="706.0" text="By clicking &quot;Continue with email&quot; above, you acknowledge that you have read, understood and agreed to TMS' " textFill="#b6b6b4" />
+                  <Hyperlink id="TermsConditions" layoutX="732.0" layoutY="703.0" text="Terms &amp; Conditions." textFill="#b6b6b4" underline="true" />
+                  <TextArea fx:id="registerEmailText" layoutX="370.0" layoutY="383.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="260.0" promptText="Enter your email address" style="-fx-control-inner-background: #f7f7f5;" wrapText="true">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </TextArea>
+                  <JFXButton fx:id="registerNowButton" cancelButton="true" defaultButton="true" layoutX="370.0" layoutY="475.0" onAction="#toCreate" prefHeight="29.0" prefWidth="260.0" ripplerFill="#f81d00" style="-fx-background-color: #fcf5f2; -fx-border-radius: 5px; -fx-border-style: solid; -fx-border-color: #f3ceca;" text="Register now" textAlignment="CENTER" textFill="#db6f6b">
+                     <font>
+                        <Font name="Corbel Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label id="LogInText" layoutX="370.0" layoutY="320.0" text="Register to start using TMS now.">
+                     <font>
+                        <Font name="Inter" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="WelcomeText" layoutX="370.0" layoutY="280.0" text="Welcome to TMS" textAlignment="CENTER">
+                     <font>
+                        <Font name="Constantia Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="registerForgotPassword" layoutX="434.0" layoutY="513.0" onAction="#toForgotten" text="Forgot password?" textFill="#b6b6b4" underline="true">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <Button layoutX="608.0" layoutY="437.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/info.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip anchorLocation="CONTENT_BOTTOM_LEFT" maxHeight="100.0" maxWidth="155.0" style="-fx-background-color: #aaaaaa; -fx-text-fill: white;" text="Passwords must have 8+ characters, at least 1 digit, and at least 1 uppercase letter." wrapText="true">
+                           <font>
+                              <Font name="Inter" size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="LogInPane" prefHeight="801.0" prefWidth="1001.0">
+               <children>
+                  <Label fx:id="passwordErrorLabel" layoutX="380.0" layoutY="457.0" style="-fx-text-fill: red;" />
+                  <ImageView id="LogoTMS" fitHeight="150.0" fitWidth="200.0" layoutX="208.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/tms-logo-png-transparent.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="emailErrorLabel" layoutX="380.0" layoutY="410.0" style="-fx-text-fill: red;" />
+                  <Label fx:id="RegisterText" layoutX="381.0" layoutY="543.0" text="Don't have an account?" textFill="#969694">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="RegisterNow" layoutX="524.0" layoutY="539.0" onAction="#toRegister" text="Register now!" textFill="#969694" underline="true">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="ForgotPassword" layoutX="435.0" layoutY="513.0" onAction="#toForgotten" text="Forgot password?" textFill="#969694" underline="true">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <PasswordField fx:id="passwordTextField" layoutX="370.0" layoutY="429.0" prefHeight="30.0" prefWidth="260.0" promptText="Enter your password" style="-fx-control-inner-background: #f7f7f5;">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <Label layoutX="440.0" layoutY="762.0" text="© 2023 TMS Corp, Inc." textFill="#969694" />
+                  <Label layoutX="150.0" layoutY="706.0" text="By clicking &quot;Continue with email&quot; above, you acknowledge that you have read, understood and agreed to TMS' " textFill="#969694" />
+                  <Hyperlink id="TermsConditions" layoutX="732.0" layoutY="703.0" text="Terms &amp; Conditions." textFill="#969694" underline="true" />
+                  <TextArea fx:id="emailTextField" layoutX="370.0" layoutY="382.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="260.0" promptText="Enter your email address" style="-fx-control-inner-background: #f7f7f5;" wrapText="true">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </TextArea>
+                  <JFXButton fx:id="ContinueEmail" cancelButton="true" defaultButton="true" layoutX="370.0" layoutY="475.0" onAction="#openDashboard" prefHeight="30.0" prefWidth="260.0" ripplerFill="#f81d00" style="-fx-background-color: #fcf5f2; -fx-border-radius: 5px; -fx-border-style: solid; -fx-border-color: #f3ceca;" text="Continue with email" textAlignment="CENTER" textFill="#db6f6b">
+                     <font>
+                        <Font name="Corbel Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label id="LogInText" layoutX="370.0" layoutY="320.0" text="Log in to start using TMS now.">
+                     <font>
+                        <Font name="Inter" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="WelcomeText" layoutX="370.0" layoutY="280.0" text="Welcome to TMS" textAlignment="CENTER">
+                     <font>
+                        <Font name="Constantia Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="clearPasswordText" layoutX="607.0" layoutY="436.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clearPassword" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/exit.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="clearEmailText" layoutX="607.0" layoutY="389.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clearEmail" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/exit.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="CreateAccountPane" prefHeight="801.0" prefWidth="1001.0" visible="false">
+               <children>
+                  <Label fx:id="nameErrorLabel" layoutX="380.0" layoutY="401.0" style="-fx-text-fill: red;" />
+                  <ImageView id="LogoTMS" fitHeight="150.0" fitWidth="200.0" layoutX="208.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/tms-logo-png-transparent.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="surnameErrorLabel" layoutX="380.0" layoutY="447.0" style="-fx-text-fill: red;" />
+                  <Label layoutX="440.0" layoutY="762.0" text="© 2023 TMS Corp, Inc." textFill="#b6b6b4" />
+                  <Label layoutX="150.0" layoutY="706.0" text="By clicking &quot;Continue with email&quot; above, you acknowledge that you have read, understood and agreed to TMS' " textFill="#b6b6b4" />
+                  <Hyperlink id="TermsConditions" layoutX="732.0" layoutY="703.0" text="Terms &amp; Conditions." textFill="#b6b6b4" underline="true" />
+                  <JFXButton fx:id="createAccountButton" cancelButton="true" defaultButton="true" layoutX="370.0" layoutY="535.0" onAction="#backToLogin" prefHeight="29.0" prefWidth="260.0" ripplerFill="#f81d00" style="-fx-background-color: #fcf5f2; -fx-border-radius: 5px; -fx-border-style: solid; -fx-border-color: #f3ceca;" text="Create your account" textAlignment="CENTER" textFill="#db6f6b">
+                     <font>
+                        <Font name="Corbel Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label id="LogInText" layoutX="370.0" layoutY="320.0" text="Finalizing your account creation.">
+                     <font>
+                        <Font name="Inter" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="WelcomeText" layoutX="370.0" layoutY="280.0" text="Welcome to TMS" textAlignment="CENTER">
+                     <font>
+                        <Font name="Constantia Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="Surname" layoutX="370.0" layoutY="416.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="260.0" promptText="Enter your surname" style="-fx-control-inner-background: #f7f7f5;" wrapText="true">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </TextArea>
+                  <Label layoutX="370.0" layoutY="460.0" text="Enter birthdate" textFill="#b6b6b4" underline="true">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="FirstName" layoutX="370.0" layoutY="373.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="260.0" promptText="Enter your first name" style="-fx-control-inner-background: #f7f7f5;" wrapText="true">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </TextArea>
+                  <ComboBox fx:id="day" layoutX="370.0" layoutY="485.0" prefHeight="33.2" prefWidth="70.0" promptText="Day" />
+                  <ComboBox fx:id="month" layoutX="460.0" layoutY="485.0" prefHeight="33.0" prefWidth="80.0" promptText="Month" />
+                  <Label fx:id="dateErrorLabel" layoutX="380.0" layoutY="519.0" style="-fx-text-fill: red;" />
+                  <Label layoutX="397.0" layoutY="578.0" text="You can also" textFill="#b6b6b4">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="LoginNow1" layoutX="473.0" layoutY="574.0" onAction="#toLogin" text="continue with email!" textFill="#b6b6b4" underline="true">
+                     <font>
+                        <Font name="Inter" size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <TextField fx:id="yearText" layoutX="560.0" layoutY="485.0" prefHeight="33.2" prefWidth="70.0" promptText="Year" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

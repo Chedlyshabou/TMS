@@ -1,0 +1,7 @@
+.tab-pane .tab-header-area {
+    -fx-effect: dropshadow(three-pass-box, rgba(15, 15, 15, 0.2), 24, 0, 0, 9);
+}
+
+.tab-pane .tab-content-area > .tab-pane {
+    -fx-effect: dropshadow(three-pass-box, rgba(15, 15, 15, 0.2), 24, 0, 0, 9);
+}

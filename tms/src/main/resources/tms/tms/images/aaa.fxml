@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <VBox alignment="CENTER" spacing="20.0">
+            <Label text="Log in to Notion" />
+            <JFXTextField promptText="Email address" />
+            <JFXPasswordField promptText="Password" />
+            <JFXButton style="-fx-background-color: #4a154b; -fx-text-fill: white;" text="Log in" />
+            <Hyperlink text="Forgot password?" style="-fx-font-size: 14px; -fx-text-fill: #4a154b;" />
+            <HBox alignment="CENTER" spacing="5.0">
+                <Label text="Don't have an account?" />
+                <Hyperlink text="Sign up" style="-fx-font-size: 14px; -fx-text-fill: #4a154b;" />
+            </HBox>
+        </VBox>
+    </center>
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+    </padding>
+</BorderPane>
